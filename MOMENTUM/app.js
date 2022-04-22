@@ -11,3 +11,11 @@ const veryLongVariableName = 0;
 console.log(a + b);
 console.log(a * b);
 console.log(a / b);
+
+// boolean
+// 컴퓨터는 0 - off, 1 - on로 구분
+
+// null(비어있음), undefined(메모리에 존재하지만 값이 들어있지 않은 상태)
+// null - 값이 비어있다고 명시적으로 선언
+const nullVal = null;   // null
+let undefinedVal;       // undefined
