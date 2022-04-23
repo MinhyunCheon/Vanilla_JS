@@ -19,3 +19,12 @@ console.log(a / b);
 // null - 값이 비어있다고 명시적으로 선언
 const nullVal = null;   // null
 let undefinedVal;       // undefined
+
+// array
+// []에 콤마(,)를 통해 구분하며, 하나의 배열에 여러 데이터를 저장할 수 있다.
+const arrTest = ["a", 1, true, null, undefined];
+// index.html을 크롬에서 최초 실행하고 개발자 도구를 활성화하면 두 로그 모두 6개의 인자를 가진다.
+// 새로고침을 하는 경우 5개, 6개 정상적으로 구분된다.
+console.log(arrTest);
+arrTest.push("add item");
+console.log(arrTest);
