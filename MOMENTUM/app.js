@@ -28,3 +28,17 @@ const arrTest = ["a", 1, true, null, undefined];
 console.log(arrTest);
 arrTest.push("add item");
 console.log(arrTest);
+
+// object
+const player = {
+    name : "test"
+    , points : 10
+};
+console.log(player);
+console.log(player.name);
+console.log(player["name"]);    // 위와 동일한 결과 출력
+player.name = "test name";      // 업데이트
+console.log(player.name);       // object가 const로 선언되어 있지만, 내부 값을 변경하는 것은 가능
+// player = true;               // 타입 변경 등 변수 전체에 대한 변화는 불가
+player.lastName = "1";          // 값 추가
+console.log(player);
