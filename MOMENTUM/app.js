@@ -42,3 +42,9 @@ console.log(player.name);       // object가 const로 선언되어 있지만, �
 // player = true;               // 타입 변경 등 변수 전체에 대한 변화는 불가
 player.lastName = "1";          // 값 추가
 console.log(player);
+
+// function
+function testFunc() {
+    console.log("hello");
+}
+testFunc();
