@@ -44,7 +44,26 @@ player.lastName = "1";          // 값 추가
 console.log(player);
 
 // function
-function testFunc() {
-    console.log("hello");
+function testFunc(nameOfPerson) {
+    console.log("hello " + nameOfPerson);
 }
-testFunc();
+testFunc("testUser");
+
+function plus(firstNumber, secondNumber) {
+    console.log(firstNumber + secondNumber);
+}
+plus(); // NaN(Not a Number) 출력
+plus(1, 2);
+// console.log(firstNumber);   // 함수 내부 선언 변수 참조 불가(Uncaught ReferenceError: firstNumber is not defined)
+function divide(a, b) {
+    console.log(a / b);
+}
+divide(4, 2);
+
+const playerFunc = {
+    name : "Test playerFunc"
+    , sayHello : function(name) {
+        console.log("hello " + name + " nice to meet you!");
+    }
+}
+playerFunc.sayHello("TestFunc");
