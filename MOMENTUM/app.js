@@ -67,3 +67,8 @@ const playerFunc = {
     }
 }
 playerFunc.sayHello("TestFunc");
+
+// Recap
+// const를 기본으로 하되, 필요에 따라 let을 사용
+// var는 절대 사용금지
+// null = 빈 값을 명시, undefined = 정의되지 않은 값
