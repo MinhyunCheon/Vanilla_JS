@@ -72,3 +72,33 @@ playerFunc.sayHello("TestFunc");
 // const를 기본으로 하되, 필요에 따라 let을 사용
 // var는 절대 사용금지
 // null = 빈 값을 명시, undefined = 정의되지 않은 값
+
+// Recap 2
+// 자바스크립트는 위에서 아래로 실행
+// function은 특정 코드를 캡슐화해서 반복사용이 가능하도록 만든 것
+// function 데이터 전달 시, 파라미터의 순서가 중요
+// 요구 파라미터의 갯수를 초과하더라도 에러가 발생하지 않음
+function minusFive(num) {
+    console.log(num - 5);   // 첫번째 값인 5와 5의 차인 0 출력
+}
+minusFive(5, 4, 3, 2, 1);
+// minusFive(num)의 num은 해당 function 안에서만 유효
+// 최종 과제 - calculator 객체 안에 사칙연산 구현
+const calculator = {
+    add : (a, b) => {
+        console.log(a + b);
+    }
+    , minus : (a, b) => {
+        console.log(a - b);
+    }
+    , multiply : (a, b) => {
+        console.log(a * b);
+    }
+    , divide : (a, b) => {
+        console.log(a / b);
+    }
+}
+calculator.add(1, 2);
+calculator.minus(2, 1);
+calculator.multiply(1, 2);
+calculator.divide(4, 2);
