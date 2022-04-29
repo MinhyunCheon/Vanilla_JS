@@ -102,3 +102,11 @@ calculator.add(1, 2);
 calculator.minus(2, 1);
 calculator.multiply(1, 2);
 calculator.divide(4, 2);
+
+// Returns
+const age = 96;
+function calculatorKrAge(ageOfForeigner) {
+    return ageOfForeigner + 2;
+}
+const krAge = calculatorKrAge(age);
+console.log(krAge);
