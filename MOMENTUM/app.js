@@ -110,3 +110,19 @@ function calculatorKrAge(ageOfForeigner) {
 }
 const krAge = calculatorKrAge(age);
 console.log(krAge);
+
+// Conditionals
+// 입력창이 출력되고, 페이지는 대기 상태
+// 위의 이유와 커스텀이 불가능한 점 때문에 prompt를 사용하지 않는 추세
+const ageOfPrompt = parseInt(prompt("How old are you?"));
+console.log(typeof ageOfPrompt);    // typeof(ageOfPrompt)도 사용 가능하나 보편적으로 띄어쓰기를 사용
+console.log(parseInt(ageOfPrompt)); // 문자를 입력한 경우 NaN 출력
+console.log(typeof NaN);            // typeof에서는 NaN도 number로 인식
+
+// Conditionals part Two
+console.log(isNaN(ageOfPrompt));    // NaN 여부 반환(return boolean)
+if(isNaN(ageOfPrompt)) {
+    console.log("Please write a number");
+} else {
+    console.log("Thank you for writing your age");
+}
