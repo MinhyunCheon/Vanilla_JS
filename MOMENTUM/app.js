@@ -126,3 +126,16 @@ if(isNaN(ageOfPrompt)) {
 } else {
     console.log("Thank you for writing your age");
 }
+
+// Conditionals part Three
+if(isNaN(ageOfPrompt) || ageOfPrompt < 0) {
+    console.log("Please write a real positive number 2");
+} else if(ageOfPrompt < 18) {
+    console.log("You are too young");
+} else if(ageOfPrompt >= 18 && ageOfPrompt <= 50) {
+    console.log("You can drink");
+} else if(ageOfPrompt > 50 && ageOfPrompt <= 80) {
+    console.log("You should exercise");
+} else if(ageOfPrompt > 80) {
+    console.log("You can do whatever you want");
+}
