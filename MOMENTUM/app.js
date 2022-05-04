@@ -139,3 +139,7 @@ if(isNaN(ageOfPrompt) || ageOfPrompt < 0) {
 } else if(ageOfPrompt > 80) {
     console.log("You can do whatever you want");
 }
+
+// Recap
+// =(값 할당), ===(값 확인, age === 100)
+// if((a && b) || (c && d)) 다중 조건 가능
