@@ -143,3 +143,8 @@ if(isNaN(ageOfPrompt) || ageOfPrompt < 0) {
 // Recap
 // =(값 할당), ===(값 확인, age === 100)
 // if((a && b) || (c && d)) 다중 조건 가능
+
+// The Document Object
+// console에 document를 통해 작성한 페이지의 구성 확인 가능
+console.dir(document);  // 객체 상세내용 출력
+document.title = "Hi";  // 페이지 타이틀 변경
