@@ -148,3 +148,8 @@ if(isNaN(ageOfPrompt) || ageOfPrompt < 0) {
 // console에 document를 통해 작성한 페이지의 구성 확인 가능
 console.dir(document);  // 객체 상세내용 출력
 document.title = "Hi";  // 페이지 타이틀 변경
+
+// HTML in Javascript
+const title = document.getElementById("title");
+console.log(title);
+title.innerText = "Got you!";
