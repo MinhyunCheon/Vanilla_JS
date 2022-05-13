@@ -12,4 +12,8 @@ qTitle.style.color = "blue";
 function handleTitleClick() {
     console.log("clicked!");
 }
+function handleTitleMouseEnter() {
+    console.log("mouse is here!");
+}
 qTitle.addEventListener("click", handleTitleClick);
+qTitle.addEventListener("mouseenter", handleTitleMouseEnter);
