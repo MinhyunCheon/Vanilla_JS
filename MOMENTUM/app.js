@@ -1,9 +1,11 @@
-// CSS in Javascript part Three
-const h1 = document.querySelector("div.hello:first-child h1");
-function handleTitleClick() {
-    // const clickedClass = "active";
-    // if(h1.classList.contains(clickedClass)) h1.classList.remove(clickedClass);
-    // else h1.classList.add(clickedClass);
-    h1.classList.toggle("active");  // 위 내용을 한줄로 처리 가능
+// const loginForm = document.querySelector("#login-form");
+// const loginInput = loginForm.querySelector("input");
+// const loginButton = loginForm.querySelector("button");
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+function clickLoginButton() {
+    alert(loginInput.value);
 }
-h1.addEventListener("click", handleTitleClick);
+
+loginButton.addEventListener("click", clickLoginButton)
