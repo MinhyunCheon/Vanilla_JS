@@ -1,14 +1,9 @@
-// CSS in Javascript
+// CSS in Javascript part Two
 const h1 = document.querySelector("div.hello:first-child h1");
 function handleTitleClick() {
-    // ==는 값만 비교하기 때문에 "0" == 0의 경우 true를 반환
-    // ===는 형태까지 비교하기 때문에 false
-    const currentColor = h1.style.color;
-    let newColor;
-    
-    if(currentColor === "blue") newColor = "tomato";
-    else newColor = "blue";
-    
-    h1.style.color = newColor;
+    // 자바스크립트에서 클래스명을 변경하는 것은 지양
+    // CSS에 선언된 기존 클래스명을 보장할 수 없음
+    if(h1.className === "active") h1.className = "";
+    else h1.className = "active";
 }
 h1.addEventListener("click", handleTitleClick);
