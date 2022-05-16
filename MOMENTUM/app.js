@@ -1,17 +1,9 @@
-// const loginForm = document.querySelector("#login-form");
-// const loginInput = loginForm.querySelector("input");
-// const loginButton = loginForm.querySelector("button");
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
 
-function clickLoginButton() {
-    // HTML에서 form으로 처리 가능하므로 굳이 JS에서 처리하는 것은 지양
-    const userName = loginInput.value;
-    if(userName === "") {
-        alert("Please write your name.");
-    } else if(userName.length > 15) {
-        alert("Your name is too long.")
-    }
+function onLoginSubmit(event) {
+    event.preventDefault(); // submit의 기본 이벤트인 새로고침을 방지하기 위해 선언
+    console.log(event);
 }
-
-loginButton.addEventListener("click", clickLoginButton)
+// 브라우저가 onLoginSubmit를 호출할 때, 페이지의 기본 정보를 함께 넘겨준다.
+loginForm.addEventListener("submit", onLoginSubmit);
