@@ -1,9 +1,9 @@
-// CSS in Javascript part Two
+// CSS in Javascript part Three
 const h1 = document.querySelector("div.hello:first-child h1");
 function handleTitleClick() {
-    // 자바스크립트에서 클래스명을 변경하는 것은 지양
-    // CSS에 선언된 기존 클래스명을 보장할 수 없음
-    if(h1.className === "active") h1.className = "";
-    else h1.className = "active";
+    // const clickedClass = "active";
+    // if(h1.classList.contains(clickedClass)) h1.classList.remove(clickedClass);
+    // else h1.classList.add(clickedClass);
+    h1.classList.toggle("active");  // 위 내용을 한줄로 처리 가능
 }
 h1.addEventListener("click", handleTitleClick);
