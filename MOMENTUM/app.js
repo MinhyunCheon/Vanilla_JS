@@ -1,19 +1,14 @@
-// Searching For Elements
-const hellos = document.getElementsByClassName("hello");
-console.log(hellos);
-const title = document.getElementsByTagName("h1");
-// querySelector 권장, 다수의 태그가 있는 경우 첫번째 요소 반환(모두 선택의 경우 querySelectorAll 사용)
-// css 형식의 검색 가능
-const qTitle = document.querySelector(".hello h1");
-console.log(qTitle);
-
-// Events
-qTitle.style.color = "blue";
+// CSS in Javascript
+const h1 = document.querySelector("div.hello:first-child h1");
 function handleTitleClick() {
-    console.log("clicked!");
+    // ==는 값만 비교하기 때문에 "0" == 0의 경우 true를 반환
+    // ===는 형태까지 비교하기 때문에 false
+    const currentColor = h1.style.color;
+    let newColor;
+    
+    if(currentColor === "blue") newColor = "tomato";
+    else newColor = "blue";
+    
+    h1.style.color = newColor;
 }
-function handleTitleMouseEnter() {
-    console.log("mouse is here!");
-}
-qTitle.addEventListener("click", handleTitleClick);
-qTitle.addEventListener("mouseenter", handleTitleMouseEnter);
+h1.addEventListener("click", handleTitleClick);
