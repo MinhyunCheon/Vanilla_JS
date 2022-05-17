@@ -13,6 +13,7 @@ function onLoginSubmit(event) {
         displayName.classList.remove(HIDDEN_CLASSNAME);
         // displayName.innerText = "Hello " + userName;
         displayName.innerText = `Hello ${userName}`;    // 위 내용 대체
+        localStorage.setItem("userName", userName);
     // }
     console.log(userName);
 }
