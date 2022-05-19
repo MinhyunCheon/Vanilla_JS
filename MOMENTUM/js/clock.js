@@ -1,11 +1,30 @@
 const clock = document.querySelector("h2#clock");
 
-clock.innerText = "00:00";
-
 function sayHello() {
     console.log("Hello");
 }
 
-// interval, 특정 주기마다 반복되어 발생해야 하는 것
-// 새로고침 시, 바로 출력되지 않고 지정된 시간이 지난 후 출력 후 반복
-setInterval(sayHello, 5000);
+function getTime() {
+    const date = new Date();
+    const hours = getTwoDigitsDate(date.getHours());
+    const minutes = getTwoDigitsDate(date.getMinutes());
+    const seconds = getTwoDigitsDate(date.getSeconds());
+
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+function getTwoDigitsDate(date) {
+    const convertDate = date.toString();
+
+    return convertDate.length < 2 ? "0" + convertDate : convertDate;
+}
+
+function setClock() {
+    clock.innerText = getTime();
+}
+
+setClock();
+// Interval과 다르게 지정된 시간 후 1회 실행
+// setTimeout(sayHello, 5000);
+setInterval(setClock, 1000);
+
