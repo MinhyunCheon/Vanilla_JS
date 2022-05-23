@@ -6,4 +6,5 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `img/${randomImage}`;
 
+// prepend 가장 위, append 가장 뒤
 document.body.appendChild(bgImage);
