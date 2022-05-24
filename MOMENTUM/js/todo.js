@@ -26,9 +26,7 @@ function addTodoList(todo) {
     button.addEventListener("click", event => {
         const e = event.target.parentElement;
         e.remove();
-        todos = todos.filter(t => {
-            return t.id.toString() !== e.id;
-        });
+        todos = todos.filter(t => t.id.toString() !== e.id);
         setLocalStorageTodos();
     });
     
