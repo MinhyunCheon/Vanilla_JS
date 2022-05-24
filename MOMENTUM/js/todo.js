@@ -1,16 +1,18 @@
 const todoForm = document.querySelector("form#todo-form");
 const todoInput = todoForm.querySelector("input")
 const todoList = document.querySelector("ul#todo-list");
+const todos = [];
 
 function handleTodoSubmit(event) {
     event.preventDefault();
     const newTodo = todoInput.value;
     todoInput.value = "";
+    todos.push(newTodo);
     addTodoList(newTodo);
+    setLocalStorageTodos();
 }
 
 function addTodoList(todo) {
-    
     const span = document.createElement("span");
     span.innerText = todo;
     const button = document.createElement("button");
@@ -24,6 +26,10 @@ function addTodoList(todo) {
     li.appendChild(button);
 
     todoList.appendChild(li);
+}
+
+function setLocalStorageTodos() {
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 todoForm.addEventListener("submit", handleTodoSubmit);
