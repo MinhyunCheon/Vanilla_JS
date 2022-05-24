@@ -1,11 +1,11 @@
 const todoForm = document.querySelector("form#todo-form");
-const todoInput = todoForm.querySelector("input")
+const todoInput = todoForm.querySelector("input");
 const todoList = document.querySelector("ul#todo-list");
 
 const TODOS_KEY = "todos";
 
 const localTodos = localStorage.getItem(TODOS_KEY);
-const todos = localTodos ? JSON.parse(localTodos) : [];
+let todos = localTodos ? JSON.parse(localTodos) : [];
 
 todos.forEach(addTodoList);
 
@@ -23,8 +23,13 @@ function addTodoList(todo) {
     span.innerText = todo.text;
     const button = document.createElement("button");
     button.innerText = "❌";
-    button.addEventListener("click", (event) => {
-        event.target.parentElement.remove();
+    button.addEventListener("click", event => {
+        const e = event.target.parentElement;
+        e.remove();
+        todos = todos.filter(t => {
+            return t.id.toString() !== e.id;
+        });
+        setLocalStorageTodos();
     });
     
     const li = document.createElement("li");
