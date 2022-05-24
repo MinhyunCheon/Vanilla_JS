@@ -10,10 +10,18 @@ function handleTodoSubmit(event) {
 }
 
 function addTodoList(todo) {
-    const li = document.createElement("li");
+    
     const span = document.createElement("span");
-    li.appendChild(span);
     span.innerText = todo;
+    const button = document.createElement("button");
+    button.innerText = "❌";
+    button.addEventListener("click", (event) => {
+        event.target.parentElement.remove();
+    });
+    
+    const li = document.createElement("li");
+    li.appendChild(span);
+    li.appendChild(button);
 
     todoList.appendChild(li);
 }
