@@ -7,9 +7,7 @@ const TODOS_KEY = "todos";
 const localTodos = localStorage.getItem(TODOS_KEY);
 const todos = localTodos ? JSON.parse(localTodos) : [];
 
-todos.forEach(element => {
-    addTodoList(element);
-});
+todos.forEach(addTodoList);
 
 function handleTodoSubmit(event) {
     event.preventDefault();
